@@ -43,7 +43,7 @@ jobs:
         env:
           WHATSAPP_API_URL: ${{ secrets.WHATSAPP_API_URL }}
           WHATSAPP_API_TOKEN: ${{ secrets.WHATSAPP_API_TOKEN }}
-          WHATSAPP_PHONE_NUMBER: ${{ secrets.WHATSAPP_PHONE_NUMBER }}
+          WHATSAPP_PHONE_NUMBER: ${{ secrets.whatsapp-phone-number:$}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Log report status
@@ -95,7 +95,7 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number || github.event.pull_request.number }}
           ISSUE_TITLE: ${{ github.event.issue.title || github.event.pull_request.title }}
 
-      - name: Notify via WhatsApp (Critical)
+      - name: Notify via WhatsApp 814 828 7012
         uses: actions/github-script@v7
         with:
           script: |
